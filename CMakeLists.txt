@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.5)
 
 # The config file contains the installation paths
 include(${CMAKE_CURRENT_SOURCE_DIR}/../Config.cmake)
+
+include(wxWidgets.cmake)
+include(boost.cmake)
+
 set(CMAKE_TOOLCHAIN_FILE toolchain.cmake)
 
 project(wx_widgets_test_1 LANGUAGES CXX)
@@ -9,52 +13,11 @@ project(wx_widgets_test_1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(WX_WIDGET_INCLUDES
-    ${WX_WIDGET_INSTALL_ROOT}/include/wx-3.2
-    ${WX_WIDGET_INSTALL_ROOT}/lib/wx/include/msw-unicode-static-3.2
-)
-
-set(WX_WIDGET_LIB_DIRS
-    ${WX_WIDGET_INSTALL_ROOT}/lib
-)
-
-set(WX_WIDGET_LIBS
-    wx_mswu_xrc-3.2
-    wx_mswu_qa-3.2
-    wx_baseu_net-3.2
-    wx_mswu_html-3.2
-    wx_mswu_core-3.2
-    wx_baseu_xml-3.2
-    wx_baseu-3.2
-    wxtiff-3.2
-    wxjpeg-3.2
-    wxpng-3.2
-    wxregexu-3.2
-    wxscintilla-3.2
-    wxexpat-3.2
-    wxzlib-3.2
-    rpcrt4
-    oleaut32
-    ole32
-    uuid
-    uxtheme
-    winspool
-    winmm
-    shell32
-    shlwapi
-    comctl32
-    comdlg32
-    advapi32
-    version
-    ws2_32
-    gdi32
-    oleacc
-    winhttp
-)
-
 # This must be declared before the subdirectories
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static -static-libstdc++")
 
 add_subdirectory(wx_hello_world)
+add_subdirectory(boost_object_to_json)
+add_subdirectory(boost_filesystem_example)
 
 
