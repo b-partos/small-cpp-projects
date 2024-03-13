@@ -19,5 +19,6 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static -static-libstdc++"
 add_subdirectory(wx_hello_world)
 add_subdirectory(boost_object_to_json)
 add_subdirectory(boost_filesystem_example)
+add_subdirectory(wx_mupdf_test_1)
 
 
