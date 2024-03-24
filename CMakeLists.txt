@@ -5,6 +5,8 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/../Config.cmake)
 
 include(wxWidgets.cmake)
 include(boost.cmake)
+include(xml2.cmake)
+include(curl.cmake)
 
 set(CMAKE_TOOLCHAIN_FILE toolchain.cmake)
 
@@ -20,5 +22,8 @@ add_subdirectory(wx_hello_world)
 add_subdirectory(boost_object_to_json)
 add_subdirectory(boost_filesystem_example)
 add_subdirectory(wx_mupdf_test_1)
+add_subdirectory(libxml2_example)
+add_subdirectory(curl_get_with_cookies)
+
 
 

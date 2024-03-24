@@ -1,0 +1,3 @@
+host=www.website.com
+cookie=PHPSESSID=scmfmhee9se8kifelgvp6fiu5g; uid=user1
+url=https://www.website.com/fleeb/juice
